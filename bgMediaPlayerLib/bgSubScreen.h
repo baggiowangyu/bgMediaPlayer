@@ -16,6 +16,7 @@ private:
 private:
 	int current_index_;
 	CStatic *screen_;
+	CRect screen_rect_;
 };
 
 #endif//_bgSubScreen_H_

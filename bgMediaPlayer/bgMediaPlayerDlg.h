@@ -5,8 +5,7 @@
 #pragma once
 #include "afxwin.h"
 #include "afxcmn.h"
-
-class bgMediaPlayer;
+#include "..\bgMediaPlayerLib\bgMediaPlayerLib.h"
 
 
 // CbgMediaPlayerDlg ¶Ô»°¿ò
@@ -34,8 +33,7 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 
-private:
-	bgMediaPlayer *player_;
+
 
 public:
 	CComboBox m_cHCount;
@@ -53,4 +51,7 @@ public:
 	afx_msg void OnBnClickedBtnPause();
 	afx_msg void OnBnClickedBtnResume();
 	afx_msg void OnBnClickedBtnCapturescreen();
+
+private:
+	bgMediaPlayer *player_;
 };

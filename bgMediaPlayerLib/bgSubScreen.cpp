@@ -10,6 +10,7 @@ int bgSubScreen::Initialize(CWnd *window, int h_count, int v_count, int h_index,
 	int e_height = player_rect.Height() / h_count;
 
 	// 计算当前窗口的RECT
+	
 
 	int errCode = 0;
 }

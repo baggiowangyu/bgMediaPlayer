@@ -49,7 +49,7 @@ END_MESSAGE_MAP()
 
 CbgMediaPlayerDlg::CbgMediaPlayerDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CbgMediaPlayerDlg::IDD, pParent)
-	, player_(this)
+	, player_(new bgMediaPlayer(this))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -200,6 +200,7 @@ void CbgMediaPlayerDlg::OnBnClickedBtnPlay()
 	CString url;
 	m_cUrl.GetWindowText(url);
 
+	USES_CONVERSION;
 	int errCode = player_->Play(T2A(url.GetBuffer(0)));
 }
 
@@ -222,3 +223,4 @@ void CbgMediaPlayerDlg::OnBnClickedBtnCapturescreen()
 {
 	//int errCode = player_->CaptureScreen();
 }
+

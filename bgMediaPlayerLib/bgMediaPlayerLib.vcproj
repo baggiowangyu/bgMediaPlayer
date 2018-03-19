@@ -187,11 +187,11 @@
 			Name="1. ²¥·ÅÆ÷¿ò¼ÜÀà"
 			>
 			<File
-				RelativePath=".\bgMediaPlayer.cpp"
+				RelativePath=".\bgMediaPlayerLib.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\bgMediaPlayer.h"
+				RelativePath=".\bgMediaPlayerLib.h"
 				>
 			</File>
 		</Filter>
