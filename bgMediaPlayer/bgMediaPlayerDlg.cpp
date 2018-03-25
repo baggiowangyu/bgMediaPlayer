@@ -49,7 +49,7 @@ END_MESSAGE_MAP()
 
 CbgMediaPlayerDlg::CbgMediaPlayerDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CbgMediaPlayerDlg::IDD, pParent)
-	, player_(new bgMediaPlayer(this))
+	, player_(NULL)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -117,6 +117,11 @@ BOOL CbgMediaPlayerDlg::OnInitDialog()
 	m_cHCount.AddString(_T("3"));
 	m_cHCount.AddString(_T("4"));
 	m_cHCount.AddString(_T("5"));
+	m_cHCount.AddString(_T("6"));
+	m_cHCount.AddString(_T("7"));
+	m_cHCount.AddString(_T("8"));
+	m_cHCount.AddString(_T("9"));
+	m_cHCount.AddString(_T("10"));
 	m_cHCount.SetCurSel(0);
 
 	m_cVCount.AddString(_T("1"));
@@ -124,6 +129,11 @@ BOOL CbgMediaPlayerDlg::OnInitDialog()
 	m_cVCount.AddString(_T("3"));
 	m_cVCount.AddString(_T("4"));
 	m_cVCount.AddString(_T("5"));
+	m_cVCount.AddString(_T("6"));
+	m_cVCount.AddString(_T("7"));
+	m_cVCount.AddString(_T("8"));
+	m_cVCount.AddString(_T("9"));
+	m_cVCount.AddString(_T("10"));
 	m_cVCount.SetCurSel(0);
 
 	m_cVolumn.SetWindowText(_T("0"));
@@ -191,6 +201,11 @@ void CbgMediaPlayerDlg::OnBnClickedBtnInit()
 
 	int h_count = _ttoi(str_h_count.GetBuffer(0));
 	int v_count = _ttoi(str_v_count.GetBuffer(0));
+
+	CWnd *screen_pointer = GetDlgItem(IDC_STATIC_SCREEN);
+
+	if (player_ == NULL)
+		player_ = new bgMediaPlayer(screen_pointer);
 
 	int errCode = player_->Initialize(h_count, v_count);
 }
