@@ -45,6 +45,7 @@ public:
 	CEdit m_cState;
 
 public:
+	afx_msg void OnDestroy();
 	afx_msg void OnBnClickedBtnInit();
 	afx_msg void OnBnClickedBtnPlay();
 	afx_msg void OnBnClickedBtnStop();
@@ -54,4 +55,5 @@ public:
 
 private:
 	bgMediaPlayer *player_;
+	
 };

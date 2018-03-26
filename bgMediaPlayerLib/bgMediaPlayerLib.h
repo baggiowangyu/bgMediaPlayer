@@ -26,7 +26,7 @@ public:
 		: screen_window_(window)
 		, play_core_(PlayCore_vlc)
 		, play_mode_(PlayMode_Normal) {}
-	~bgMediaPlayer() { screen_window_ = NULL; }
+	~bgMediaPlayer() { Destroy(); screen_window_ = NULL; }
 
 public:
 	int Initialize(int h_count = 1, int v_count = 1, enum _PlayCore_ core = PlayCore_vlc, enum _PlayMode_ mode = PlayMode_Normal);

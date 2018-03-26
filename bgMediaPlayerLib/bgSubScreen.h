@@ -12,7 +12,16 @@ public:
 
 public:
 	int Initialize(CWnd *window, int h_count, int v_count, int h_index, int v_index, enum _PlayCore_ core);
+	void Close();
 	void Destroy();
+
+public:
+	int Play(const char *url);
+	int Stop();
+	int Pause();
+	int Resume();
+
+	int CaptureScreen(const char *path);
 
 private:
 	//CRect GetSubScreenRect();

@@ -77,6 +77,7 @@ BEGIN_MESSAGE_MAP(CbgMediaPlayerDlg, CDialog)
 	ON_BN_CLICKED(IDC_BTN_PAUSE, &CbgMediaPlayerDlg::OnBnClickedBtnPause)
 	ON_BN_CLICKED(IDC_BTN_RESUME, &CbgMediaPlayerDlg::OnBnClickedBtnResume)
 	ON_BN_CLICKED(IDC_BTN_CAPTURESCREEN, &CbgMediaPlayerDlg::OnBnClickedBtnCapturescreen)
+	ON_WM_DESTROY()
 END_MESSAGE_MAP()
 
 
@@ -190,6 +191,12 @@ HCURSOR CbgMediaPlayerDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+void CbgMediaPlayerDlg::OnDestroy()
+{
+	CDialog::OnDestroy();
+}
+
+
 
 void CbgMediaPlayerDlg::OnBnClickedBtnInit()
 {
@@ -238,4 +245,5 @@ void CbgMediaPlayerDlg::OnBnClickedBtnCapturescreen()
 {
 	//int errCode = player_->CaptureScreen();
 }
+
 

@@ -49,7 +49,6 @@ int bgSubScreen::Initialize(CWnd *window, int h_count, int v_count, int h_index,
 
 	// 绘制当前子窗口的坐标范围
 	CRect player_rect;
-	//GetWindowRect(window, &player_rect);
 	window->GetWindowRect(&player_rect);
 
 	int e_width = player_rect.Width() / v_count;
@@ -86,4 +85,39 @@ int bgSubScreen::Initialize(CWnd *window, int h_count, int v_count, int h_index,
 	screen_->ShowWindow(SW_SHOW);
 
 	return 0;
+}
+
+void bgSubScreen::Destroy()
+{
+
+}
+
+int bgSubScreen::Play(const char *url)
+{
+	int errCode = 0;
+	return errCode;
+}
+
+int bgSubScreen::Stop()
+{
+	int errCode = 0;
+	return errCode;
+}
+
+int bgSubScreen::Pause()
+{
+	int errCode = 0;
+	return errCode;
+}
+
+int bgSubScreen::Resume()
+{
+	int errCode = 0;
+	return errCode;
+}
+
+int bgSubScreen::CaptureScreen(const char *path)
+{
+	int errCode = 0;
+	return errCode;
 }
